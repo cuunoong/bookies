@@ -59,6 +59,8 @@ Download file figmanya di [Shaynakit.com](https://shaynakit.com/details/bookies-
 5. Tunggu sampai proses selesai, maka akan terbentuk struktur projek seperti gambar ini.
    ![Project created](/docs/images/project-created.png)
 
+---
+
 ## Menyiapkan `assets` dan `dependencies`
 
 Buka file figma yang telah di download kemudian export semua gambar kedalam folder `/assets/images/`
@@ -105,6 +107,8 @@ Kemudian simpan `pubspec.yaml` dan lakukan `Flutter Doctor` agar assets dan depe
 
 Caranya dengan menekan `CTRL + P` atau `Command + P` ketikkan `>Flutter: Run Flutter Doctor` lalu tekan `Enter`.
 
+---
+
 ## Membuat Struktur Projek
 
 Pada tahap ini kita akan membuat folder untuk projek kita, biasanya ada beberapa folder di dalam folder `lib` yang harus di buat seperti `components`, `datas`, `models`, `screens`, dan juga `theme.dark` untuk menyimpan theme kita.
@@ -123,6 +127,23 @@ Pada tahap ini kita akan membuat folder untuk projek kita, biasanya ada beberapa
 ├── linux
 └── ...
 ```
+
+---
+
+## Theme
+
+Setelah kita amati dan perhatikan file figma terdapat beberapa warna, jenis tulisan yang dipakai, itu semua akan kita masukkan ke dalam `theme.dart` agar dapat kita pakai secara berulang-ulang.
+
+1. Warna
+
+   | Warna         | Kode Warna                                                             |
+   | ------------- | ---------------------------------------------------------------------- |
+   | text          | ![#35325E](https://via.placeholder.com/16/35325E/35325E.png) `#35325E` |
+   | textSecondary | ![#90909E](https://via.placeholder.com/16/90909E/90909E.png) `#90909E` |
+   | blue          | ![#8EC9F5](https://via.placeholder.com/16/8EC9F5/8EC9F5.png) `#8EC9F5` |
+   | purple        | ![#ADAEFF](https://via.placeholder.com/16/ADAEFF/ADAEFF.png) `#ADAEFF` |
+   | red           | ![#FDEBEA](https://via.placeholder.com/16/FDEBEA/FDEBEA.png) `#FDEBEA` |
+   | gray          | ![#F6F8FA](https://via.placeholder.com/16/F6F8FA/F6F8FA.png) `#F6F8FA` |
 
 ##### Visual Studio Code Extensions
 
