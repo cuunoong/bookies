@@ -20,7 +20,28 @@
 
 # Bookies
 
-Hi there 👋, it's me Arif Iskandar.
-Today we will create Bookies Homepage using [Flutter](https://flutter.io/). Bookies is a mobile application used to read digital book.
+Hi 👋, bersama saya Arif Iskandar.
+Nah hari ini kita akan melakukan slicing aplikasi Bookies dengan menggunakan [Flutter](https://flutter.io/). Oh iya, Bookies adalah aplikasi mobile untuk membaca buku digital.
 
-So, let's start.
+Jadi, ayo kita mulai.
+
+---
+
+## Persiapan
+
+Aplikasi yang digunakan:
+
+- [Figma](https://www.figma.com)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- Emulator
+  - Windows - [Android Studio Emulator](https://developer.android.com/studio) atau
+  - Mac - [Xcode Simulator](https://developer.apple.com/xcode/) atau
+  - IPhone / Android
+
+Apabila semua aplikasi sudah disiapkan, pastikan kamu telah menginstall [flutter](https://docs.flutter.dev/get-started/install) di laptop/pc kamu.
+
+## Figma file
+
+Download file figmanya di [Shaynakit.com](https://shaynakit.com/details/bookies-read-digital-book-app).
+
+---
