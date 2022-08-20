@@ -68,6 +68,8 @@ Download file figmanya di [Shaynakit.com](https://shaynakit.com/details/bookies-
 | 3.  | Flutter                 |
 | 4.  | Rainbow Brackets        |
 
-```php
-echo "Oke";
+```dart
+void main() {
+  runApp(const MyApp());
+}
 ```
