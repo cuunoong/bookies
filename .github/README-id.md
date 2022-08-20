@@ -145,6 +145,8 @@ Setelah kita amati dan perhatikan file figma terdapat beberapa warna, jenis tuli
    | red           | ![#FDEBEA](https://via.placeholder.com/16/FDEBEA/FDEBEA.png) `#FDEBEA` |
    | gray          | ![#F6F8FA](https://via.placeholder.com/16/F6F8FA/F6F8FA.png) `#F6F8FA` |
 
+---
+
 ##### Visual Studio Code Extensions
 
 | No  | Plugin                  |
