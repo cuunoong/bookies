@@ -21,7 +21,7 @@
 # Bookies
 
 Hi 👋, bersama saya Arif Iskandar.
-Nah hari ini kita akan melakukan slicing aplikasi Bookies dengan menggunakan [Flutter](https://flutter.io/). Oh iya, Bookies adalah aplikasi mobile untuk membaca buku digital.
+Nah kali ini kita akan melakukan slicing aplikasi Bookies dengan menggunakan [Flutter](https://flutter.io/). Oh iya, Bookies adalah aplikasi mobile untuk membaca buku digital.
 
 Jadi, ayo kita mulai.
 
@@ -61,7 +61,7 @@ Download file figmanya di [Shaynakit.com](https://shaynakit.com/details/bookies-
 
 ## Menyiapkan `assets` dan `dependencies`
 
-Buka file figma yang telah di download kemudian export semua gambar keadalam folder `/assets/images/`
+Buka file figma yang telah di download kemudian export semua gambar kedalam folder `/assets/images/`
 
 ```
 .
@@ -77,6 +77,33 @@ Buka file figma yang telah di download kemudian export semua gambar keadalam fol
 ```
 
 ![Export Images](/docs/images/image-export.png)
+
+Selanjutnya, kita akan mendaftarkan gambar-gambar tadi kedalam `pubspec.yaml`
+
+```yaml
+# pubspec.yaml
+# ...
+flutter:
+  # ...
+  assets:
+    - assets/images/
+# ...
+```
+
+Setelah assets ditambahkan kita juga akan menginstall [`Feather Icons`](https://feathericons.com/) untuk semua icon yang kita gunakan pada projek kali ini.
+
+```yaml
+# pubspec.yaml
+# ...
+dependencies:
+  # ...
+  flutter_feather_icons: ^2.0.0
+# ...
+```
+
+Kemudian simpan `pubspec.yaml` dan lakukan `Flutter Doctor` agar assets dan dependencies kita dapat dipakai.
+
+Caranya dengan menekan `CTRL + P` atau `Command + P` ketikkan `>Flutter: Run Flutter Doctor` lalu tekan `Enter`
 
 ##### Visual Studio Code Extensions
 
