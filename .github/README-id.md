@@ -40,7 +40,7 @@ Aplikasi yang digunakan:
 
 Apabila semua aplikasi sudah disiapkan, pastikan kamu telah menginstall [flutter](https://docs.flutter.dev/get-started/install) di laptop / pc kamu.
 
-## Figma file
+### Figma file
 
 Download file figmanya di [Shaynakit.com](https://shaynakit.com/details/bookies-read-digital-book-app).
 
@@ -50,7 +50,7 @@ Download file figmanya di [Shaynakit.com](https://shaynakit.com/details/bookies-
 
 1. Buka Aplikasi Visual Studio Code
 
-2. Untuk membuat projek silahkan tekan `CTRL + P`atau`Command + P`di Visual Studio Code. Kemudian ketikkan:`>Flutter: New Project` dan `Enter`
+2. Untuk membuat projek silahkan tekan `CTRL + P` atau `Command + P` di Visual Studio Code. Kemudian ketikkan `>Flutter: New Project` lalu tekan `Enter`
    ![create-flutter-project](/docs/images/create-flutter-project.png)
 3. Kemudian pilih `Application`
    ![select-application-themplate](/docs/images/select-application-themplate.png)
@@ -67,3 +67,7 @@ Download file figmanya di [Shaynakit.com](https://shaynakit.com/details/bookies-
 | 2.  | Dart                    |
 | 3.  | Flutter                 |
 | 4.  | Rainbow Brackets        |
+
+```php
+echo "Oke";
+```
