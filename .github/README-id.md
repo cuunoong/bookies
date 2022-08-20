@@ -51,13 +51,32 @@ Download file figmanya di [Shaynakit.com](https://shaynakit.com/details/bookies-
 1. Buka Aplikasi Visual Studio Code
 
 2. Untuk membuat projek silahkan tekan `CTRL + P` atau `Command + P` di Visual Studio Code. Kemudian ketikkan `>Flutter: New Project` lalu tekan `Enter`
-   ![create-flutter-project](/docs/images/create-flutter-project.png)
+   ![Create flutter project](/docs/images/create-flutter-project.png)
 3. Kemudian pilih `Application`
-   ![select-application-themplate](/docs/images/select-application-themplate.png)
+   ![Select application themplate](/docs/images/select-application-themplate.png)
 4. Lalu pilih lokasi folder projek yang ingin di buat, dan terakhir ketikkan `bookies` pada pilihan nama projek.
-   ![bookies-project-name](/docs/images/bookies-project-name.png)
+   ![Bookies project name](/docs/images/bookies-project-name.png)
 5. Tunggu sampai proses selesai, maka akan terbentuk struktur projek seperti gambar ini.
-   ![project-created](/docs/images/project-created.png)
+   ![Project created](/docs/images/project-created.png)
+
+## Menyiapkan `assets` dan `dependencies`
+
+Buka file figma yang telah di download kemudian export semua gambar keadalam folder `/assets/images/`
+
+```
+.
+├── ...
+├── android
+├── assets/
+│   └── images/
+│       ├── 1.png
+│       ├── 2.png
+│       └── 3.png
+├── ios
+└── ...
+```
+
+![Export Images](/docs/images/image-export.png)
 
 ##### Visual Studio Code Extensions
 
@@ -68,8 +87,4 @@ Download file figmanya di [Shaynakit.com](https://shaynakit.com/details/bookies-
 | 3.  | Flutter                 |
 | 4.  | Rainbow Brackets        |
 
-```dart
-void main() {
-  runApp(const MyApp());
-}
-```
+![Export Images]
