@@ -103,7 +103,26 @@ dependencies:
 
 Kemudian simpan `pubspec.yaml` dan lakukan `Flutter Doctor` agar assets dan dependencies kita dapat dipakai.
 
-Caranya dengan menekan `CTRL + P` atau `Command + P` ketikkan `>Flutter: Run Flutter Doctor` lalu tekan `Enter`
+Caranya dengan menekan `CTRL + P` atau `Command + P` ketikkan `>Flutter: Run Flutter Doctor` lalu tekan `Enter`.
+
+## Membuat Struktur Projek
+
+Pada tahap ini kita akan membuat folder untuk projek kita, biasanya ada beberapa folder di dalam folder `lib` yang harus di buat seperti `components`, `datas`, `models`, `screens`, dan juga `theme.dark` untuk menyimpan theme kita.
+
+```
+.
+├── ...
+├── ios
+├── lib/
+│   ├── components/
+│   ├── datas/
+│   ├── models/
+│   ├── screens/
+│   ├── main.dart
+│   └── theme.dart
+├── linux
+└── ...
+```
 
 ##### Visual Studio Code Extensions
 
@@ -113,5 +132,3 @@ Caranya dengan menekan `CTRL + P` atau `Command + P` ketikkan `>Flutter: Run Flu
 | 2.  | Dart                    |
 | 3.  | Flutter                 |
 | 4.  | Rainbow Brackets        |
-
-![Export Images]
