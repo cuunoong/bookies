@@ -25,6 +25,15 @@ Nah kali ini kita akan melakukan slicing aplikasi Bookies dengan menggunakan [Fl
 
 Jadi, ayo kita mulai.
 
+##### Table of content
+
+- [Persiapan](#persiapan)
+  - [Figma File](#figma-file)
+- [Membuat Projek](#membuat-projek)
+- [Menyiapkan assets dan dependencies](#menyiapkan-assets-dan-dependencies)
+- [Membuat Struktur Projek](#membuat-struktur-projek)
+- [Theme](#theme)
+
 ---
 
 ## Persiapan
@@ -40,16 +49,16 @@ Aplikasi yang digunakan:
 
 Apabila semua aplikasi sudah disiapkan, pastikan kamu telah menginstall [flutter](https://docs.flutter.dev/get-started/install) di laptop / pc kamu.
 
-### Figma file
+### Figma File
 
 Download file figmanya di [Shaynakit.com](https://shaynakit.com/details/bookies-read-digital-book-app).
+![Figma file trailer](/docs/images/figma-trailer.png)
 
 ---
 
 ## Membuat Projek
 
 1. Buka Aplikasi Visual Studio Code
-
 2. Untuk membuat projek silahkan tekan `CTRL + P` atau `Command + P` di Visual Studio Code. Kemudian ketikkan `>Flutter: New Project` lalu tekan `Enter`
    ![Create flutter project](/docs/images/create-flutter-project.png)
 3. Kemudian pilih `Application`
@@ -145,6 +154,19 @@ Setelah kita amati dan perhatikan file figma terdapat beberapa warna, jenis tuli
    | red           | ![#FDEBEA](https://via.placeholder.com/16/FDEBEA/FDEBEA.png) `#FDEBEA` |
    | gray          | ![#F6F8FA](https://via.placeholder.com/16/F6F8FA/F6F8FA.png) `#F6F8FA` |
 
+   ```dart
+   // theme.dart
+   import 'package:flutter/material.dart';
+
+   // Colors
+   Color text = const Color(0XFF35325E);
+   Color textSecondary = const Color(0XFF90909E);
+   Color blue = const Color(0XFF8EC9F5);
+   Color purple = const Color(0XFFADAEFF);
+   Color red = const Color(0XFFFDEBEA);
+   Color gray = const Color(0XFFF6F8FA);
+   ```
+
 ---
 
 ##### Visual Studio Code Extensions
@@ -155,3 +177,7 @@ Setelah kita amati dan perhatikan file figma terdapat beberapa warna, jenis tuli
 | 2.  | Dart                    |
 | 3.  | Flutter                 |
 | 4.  | Rainbow Brackets        |
+
+```
+
+```
