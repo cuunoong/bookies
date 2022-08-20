@@ -38,10 +38,32 @@ Aplikasi yang digunakan:
   - Mac - [Xcode Simulator](https://developer.apple.com/xcode/) atau
   - IPhone / Android
 
-Apabila semua aplikasi sudah disiapkan, pastikan kamu telah menginstall [flutter](https://docs.flutter.dev/get-started/install) di laptop/pc kamu.
+Apabila semua aplikasi sudah disiapkan, pastikan kamu telah menginstall [flutter](https://docs.flutter.dev/get-started/install) di laptop / pc kamu.
 
 ## Figma file
 
 Download file figmanya di [Shaynakit.com](https://shaynakit.com/details/bookies-read-digital-book-app).
 
 ---
+
+## Membuat Projek
+
+1. Buka Aplikasi Visual Studio Code
+
+2. Untuk membuat projek silahkan tekan `CTRL + P`atau`Command + P`di Visual Studio Code. Kemudian ketikkan:`>Flutter: New Project` dan `Enter`
+   ![create-flutter-project](/docs/images/create-flutter-project.png)
+3. Kemudian pilih `Application`
+   ![select-application-themplate](/docs/images/select-application-themplate.png)
+4. Lalu pilih lokasi folder projek yang ingin di buat, dan terakhir ketikkan `bookies` pada pilihan nama projek.
+   ![bookies-project-name](/docs/images/bookies-project-name.png)
+5. Tunggu sampai proses selesai, maka akan terbentuk struktur projek seperti gambar ini.
+   ![project-created](/docs/images/project-created.png)
+
+##### Visual Studio Code Extensions
+
+| No  | Plugin                  |
+| --- | ----------------------- |
+| 1.  | Awsome Flutter Snippets |
+| 2.  | Dart                    |
+| 3.  | Flutter                 |
+| 4.  | Rainbow Brackets        |
