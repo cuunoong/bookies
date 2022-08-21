@@ -325,7 +325,9 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-#### Slicing Topics
+---
+
+### Slicing Topics
 
 ![Guideline Topic](/docs/images/guideline-topics.png)
 
@@ -337,6 +339,7 @@ Karena kita halaman bisa di scroll maka kita akan menggunakan `SingleChildScroll
 //...
 // Containernya kita ganti Scaffold
 return Scaffold(
+   backgroundColor: Colors.white,
    body: SingleChildScrollView(
       child: Column(
 
@@ -389,7 +392,7 @@ SizedBox(
          // membuat list horizontal
          scrollDirection: Axis.horizontal,
 
-         // padding list ke
+         // padding list ke kiri dan kanan
          padding: const EdgeInsets.symmetric(horizontal: 24),
 
          // Dibagian ini akan kita ganti dengan komponen TopicItem yang akan dibuat
@@ -492,6 +495,157 @@ return Container(
 );
 // ...
 ```
+
+Hasil nya, yeayyy
+
+![Slicing Topic Result](/docs/images/slicing-topics-result.png)
+
+---
+
+### Slicing Buku Populer
+
+Kita akan membuat judul `Most popular seperti judul yang sebelumnya
+
+```dart
+// lib/screens/home_page.dart
+
+// ...
+// ListView.separated
+
+// Tulisan Most Popular
+Padding(
+   padding: const EdgeInsets.only(top: 32, left: 24, bottom: 12),
+   child: Text(
+      'Most Popular',
+      style: medium18.copyWith(color: text),
+   ),
+)
+// ...
+```
+
+Kemudian kita akan melakukan perulangan untuk semua buku populer
+
+```dart
+// ...
+// Tulisan Most Pupular
+
+...populars.map(
+   (book) => PopularItem(book: book) // komponen popular item
+)
+
+// ...
+```
+
+Kita akan membuat komponen `PopularItem` didalam folder components
+
+```dart
+// lib/components/popular_item.dart
+import 'package:bookies/models/book.dart';
+import 'package:flutter/material.dart';
+
+class PopularItem extends StatelessWidget {
+   // book yang akan dikirim dari list
+   final Book book;
+   const PopularItem({Key? key, required this.book}) : super(key: key);
+
+   @override
+   Widget build(BuildContext context) {
+      // Layout untuk Buku disini
+      return Container();
+   }
+}
+```
+
+Tahap terakhir adalah membuat layout untuk buku pupuler sesuai dengan ukuran yang ada di desain.
+
+```dart
+// lib/components/popular_item.dart
+return Container(
+   // conainer terluar
+   padding: const EdgeInsets.only(left: 24, bottom: 12, right: 24),
+   height: 178,
+
+   child: Container(
+      padding: const EdgeInsets.only(
+         left: 16, top: 16,
+         bottom: 16, right: 16),
+      decoration: BoxDecoration(
+         borderRadius: BorderRadius.circular(25),
+         color: const Color(0xFFF6F8FA)),
+      child: Row(
+         children: [
+
+            // Gambar buku
+            Container(
+               clipBehavior: Clip.hardEdge,
+               decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(13)),
+               child: Image.asset(book.image),
+            ),
+
+            const SizedBox(
+               width: 16,
+            ),
+
+            // Judul dan topik
+            Flexible(
+               child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+
+                     // Judul
+                     Text(
+                        book.title,
+                        style: medium16.copyWith(color: text),
+                     ),
+
+                     const SizedBox(
+                        height: 8,
+                     ),
+
+                     // Topik
+                     Text(
+                        book.topic,
+                        style: regular14.copyWith(color: textSecondary),
+                     ),
+               ],
+            )),
+
+            // Icon
+            SizedBox(
+               width: 36,
+               child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                     Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                           borderRadius: BorderRadius.circular(18),
+                           color: Colors.white),
+                        child: const Icon(
+                           FeatherIcons.heart,
+                           size: 16,
+                        ),
+                     )
+                  ],
+               ),
+            )
+         ],
+      ),
+   ),
+);
+```
+
+Hasil nya, yeayyy
+
+![Slicing Popular Result](/docs/images/slicing-most-popular-result.png)
+
+---
+
+# Selamat Mencoba :smile:
+
+---
 
 ##### Visual Studio Code Extensions
 

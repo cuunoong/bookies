@@ -10,7 +10,7 @@ Color gray = const Color(0XFFF6F8FA);
 
 // Typography
 TextStyle regular10 = const TextStyle(fontSize: 10);
-TextStyle regular14 = regular10.copyWith(fontSize: 10);
+TextStyle regular14 = regular10.copyWith(fontSize: 14);
 
 TextStyle medium14 = const TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
 TextStyle medium16 = medium14.copyWith(fontSize: 16);
