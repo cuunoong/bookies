@@ -189,7 +189,7 @@ Setelah kita amati dan perhatikan file figma terdapat beberapa warna dan jenis t
 
 ---
 
-## Membuat model data
+## Membuat Model Data
 
 ![Datas](/docs/images/datas.png)
 
@@ -200,7 +200,7 @@ Setelah kita amati dan perhatikan file figma terdapat beberapa warna dan jenis t
    import 'package:flutter/material.dart';
 
    class Topic {
-      final Icon icon;
+      final IconData icon;
       final Color color;
       final String title;
       final int totalBook;
@@ -221,6 +221,69 @@ Setelah kita amati dan perhatikan file figma terdapat beberapa warna dan jenis t
       Book(this.title, this.image, this.topic);
    }
    ```
+
+---
+
+## Menyiapkan Data
+
+Setelah model disiapkan, kita akan menyiapkan data yang akan digunakan pada aplikasi ini. Data dapat diambil dari desain yang ada di figma sebagai contoh, namun untuk data yang real bisa diambil dari database maupun api.
+
+```dart
+// lib/datas/topics.dart
+import 'package:bookies/models/topic.dart';
+import 'package:bookies/theme.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+
+List<Topic> topics = [
+   Topic(
+      FeatherIcons.award,     // icon
+      blue,                   // color
+      'My Self Improvement',  // title
+      84                      // totalBook
+   ),
+   Topic(
+      FeatherIcons.trendingUp,
+      purple,
+      'Business Education',
+      12
+   ),
+   Topic(
+      FeatherIcons.star,
+      red,
+      'Non-Fiction Stories',
+      5
+   ),
+];
+```
+
+```dart
+// lib/datas/populars.dart
+import 'package:bookies/models/book.dart';
+
+List<Book> populars = [
+   Book(
+      "Lamp of Brightnes Real World",  // title
+      "assets/images/1.png",           // image
+      "Growth Business"                // topic
+   ),
+   Book(
+      "Art of Gathering Do Meeting",
+      "assets/images/2.png",
+      "Team Product"
+   ),
+   Book(
+      "Tiger In The Garden For Eating",
+      "assets/images/3.png",
+      "Children Story"
+   )
+];
+```
+
+---
+
+## Waktunya Coding
+
+---
 
 ##### Visual Studio Code Extensions
 

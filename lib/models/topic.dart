@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Topic {
-  final Icon icon;
+  final IconData icon;
   final Color color;
   final String title;
   final int totalBook;
