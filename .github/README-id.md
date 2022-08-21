@@ -170,6 +170,7 @@ Setelah kita amati dan perhatikan file figma terdapat beberapa warna dan jenis t
    ```
 
 2. Typography
+
    Untuk typography sendiri biasanya kalau saya tidak memakai design system, saya akan mengelompokkan berdasarkan jenis dan besar tulisan. Untuk menghemat file size dan merapikan code kita, saya akan mengcopy dan mengubah fontSize dari yang sudah ada.
 
    ```dart
@@ -190,7 +191,36 @@ Setelah kita amati dan perhatikan file figma terdapat beberapa warna dan jenis t
 
 ## Membuat model data
 
----
+![Datas](/docs/images/datas.png)
+
+1. Topic
+
+   ```dart
+   // lib/models/topic.dart
+   import 'package:flutter/material.dart';
+
+   class Topic {
+      final Icon icon;
+      final Color color;
+      final String title;
+      final int totalBook;
+
+      Topic(this.icon, this.color, this.title, this.totalBook);
+   }
+   ```
+
+2. Book
+
+   ```dart
+   // lib/models/book.dart
+   class Book {
+      final String title;
+      final String image;
+      final String topic;
+
+      Book(this.title, this.image, this.topic);
+   }
+   ```
 
 ##### Visual Studio Code Extensions
 
