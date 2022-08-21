@@ -76,7 +76,7 @@ Download file figmanya di [Shaynakit.com](https://shaynakit.com/details/bookies-
 
 Buka file figma yang telah di download kemudian export semua gambar kedalam folder `/assets/images/`
 
-```
+```#
 .
 ├── ...
 ├── android
@@ -124,7 +124,7 @@ Caranya dengan menekan `CTRL + P` atau `Command + P` ketikkan `>Flutter: Run Flu
 
 Pada tahap ini kita akan membuat folder untuk projek kita, biasanya ada beberapa folder di dalam folder `lib` yang harus di buat seperti `components`, `datas`, `models`, `screens`, dan juga `theme.dark` untuk menyimpan theme kita.
 
-```
+```#
 .
 ├── ...
 ├── ios
@@ -161,27 +161,34 @@ Setelah kita amati dan perhatikan file figma terdapat beberapa warna dan jenis t
    import 'package:flutter/material.dart';
 
    // Colors
-   Color text = const Color(0XFF35325E);
-   Color textSecondary = const Color(0XFF90909E);
-   Color blue = const Color(0XFF8EC9F5);
-   Color purple = const Color(0XFFADAEFF);
-   Color red = const Color(0XFFFDEBEA);
-   Color gray = const Color(0XFFF6F8FA);
+   Color text           = const Color(0XFF35325E);
+   Color textSecondary  = const Color(0XFF90909E);
+   Color blue           = const Color(0XFF8EC9F5);
+   Color purple         = const Color(0XFFADAEFF);
+   Color red            = const Color(0XFFFDEBEA);
+   Color gray           = const Color(0XFFF6F8FA);
    ```
 
 2. Typography
    Untuk typography sendiri biasanya kalau saya tidak memakai design system, saya akan mengelompokkan berdasarkan jenis dan besar tulisan. Untuk menghemat file size dan merapikan code kita, saya akan mengcopy dan mengubah fontSize dari yang sudah ada.
 
    ```dart
+   // theme.dart
+
+   // ...
 
    // Typography
-   TextStyle regular10 = const TextStyle(fontSize: 10);
-   TextStyle regular14 = regular10.copyWith(fontSize: 10);
+   TextStyle regular10  = const TextStyle(fontSize: 10);
+   TextStyle regular14  = regular10.copyWith(fontSize: 10);
 
-   TextStyle medium14 = const TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
-   TextStyle medium16 = medium14.copyWith(fontSize: 16);
-   TextStyle medium18 = medium14.copyWith(fontSize: 18);
+   TextStyle medium14   = const TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
+   TextStyle medium16   = medium14.copyWith(fontSize: 16);
+   TextStyle medium18   = medium14.copyWith(fontSize: 18);
    ```
+
+---
+
+## Membuat model data
 
 ---
 
@@ -193,7 +200,3 @@ Setelah kita amati dan perhatikan file figma terdapat beberapa warna dan jenis t
 | 2.  | Dart                    |
 | 3.  | Flutter                 |
 | 4.  | Rainbow Brackets        |
-
-```
-
-```
