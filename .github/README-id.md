@@ -25,6 +25,8 @@ Nah kali ini kita akan melakukan slicing aplikasi Bookies dengan menggunakan [Fl
 
 Jadi, ayo kita mulai.
 
+---
+
 ##### Table of content
 
 - [Persiapan](#persiapan)
@@ -141,7 +143,7 @@ Pada tahap ini kita akan membuat folder untuk projek kita, biasanya ada beberapa
 
 ## Theme
 
-Setelah kita amati dan perhatikan file figma terdapat beberapa warna, jenis tulisan yang dipakai, itu semua akan kita masukkan ke dalam `theme.dart` agar dapat kita pakai secara berulang-ulang.
+Setelah kita amati dan perhatikan file figma terdapat beberapa warna dan jenis tulisan yang dipakai, itu semua akan kita masukkan ke dalam `theme.dart` agar dapat kita pakai secara berulang-ulang.
 
 1. Warna
 
@@ -165,6 +167,20 @@ Setelah kita amati dan perhatikan file figma terdapat beberapa warna, jenis tuli
    Color purple = const Color(0XFFADAEFF);
    Color red = const Color(0XFFFDEBEA);
    Color gray = const Color(0XFFF6F8FA);
+   ```
+
+2. Typography
+   Untuk typography sendiri biasanya kalau saya tidak memakai design system, saya akan mengelompokkan berdasarkan jenis dan besar tulisan. Untuk menghemat file size dan merapikan code kita, saya akan mengcopy dan mengubah fontSize dari yang sudah ada.
+
+   ```dart
+
+   // Typography
+   TextStyle regular10 = const TextStyle(fontSize: 10);
+   TextStyle regular14 = regular10.copyWith(fontSize: 10);
+
+   TextStyle medium14 = const TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
+   TextStyle medium16 = medium14.copyWith(fontSize: 16);
+   TextStyle medium18 = medium14.copyWith(fontSize: 18);
    ```
 
 ---
