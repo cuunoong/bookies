@@ -283,7 +283,215 @@ List<Book> populars = [
 
 ## Waktunya Coding
 
----
+### Membuat page baru
+
+Kita akan membuat file `home_page.dart` didalam folder screens sebagai tempat kita berimajinasi hehehe. Kemudian buat `Stateless Widget` sebagai pondasi utamanya.
+
+```dart
+// lib/screens/home_page.dart
+import 'package:flutter/material.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+```
+
+Selanjutnya ubah `main.dart` agar dapat terhubung dengan `home_page.dart`.
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:bookies/screens/home_page.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      home: HomePage(), // menjadikan home sebagai screen pertama yang akan dibuka
+    );
+  }
+}
+```
+
+#### Slicing Topics
+
+![Guideline Topic](/docs/images/guideline-topics.png)
+
+Karena kita halaman bisa di scroll maka kita akan menggunakan `SingleChildScrollView` dan `Column` untuk menampung semua komponennya
+
+```dart
+// libs/screen/home_page.dart
+
+//...
+// Containernya kita ganti Scaffold
+return Scaffold(
+   body: SingleChildScrollView(
+      child: Column(
+
+         // agar elemen di dalamnya rata kiri
+         crossAxisAlignment: CrossAxisAlignment.start,
+
+         children: [
+            // Views akan di letakkan di bagian ini
+         ],
+      )
+   ),
+);
+//...
+```
+
+Kita akan membuat tulisan `Topics` dengan style `medium 18` dengan padding atas 40, kiri 24, dan bawah 12
+
+```dart
+// libs/screen/home_page.dart
+
+// ...
+Column(
+   //...
+   children: [
+
+      // Tulisan Topics
+      Padding(
+         padding: const EdgeInsets.only(top: 40, left: 24, bottom: 12),
+         child: Text(
+            'Topics',
+            style: medium18.copyWith(color: text),
+         ),
+      )
+   ],
+)
+
+// ...
+```
+
+Kemudian kita membuat horizontal scroll untuk daftar topik yang tersedia, karena memiliki ukuran yang sama jadi kita pakai `ListView.separated` agar rapi. Dan kita akan membungkus listview dengan `SizedBox` dengan ukuran seperti yang ada di gambar
+
+```dart
+
+// Tulisan Topics
+SizedBox(
+   height: 180,
+   child:
+      ListView.separated(
+
+         // membuat list horizontal
+         scrollDirection: Axis.horizontal,
+
+         // padding list ke
+         padding: const EdgeInsets.symmetric(horizontal: 24),
+
+         // Dibagian ini akan kita ganti dengan komponen TopicItem yang akan dibuat
+         itemBuilder: ((context, index) => Container()),
+
+         // Jarak antara komponen
+         separatorBuilder: (context, index) => const SizedBox(width: 16,),
+
+         // jumlah komponen
+         itemCount: topics.length
+      ),
+)
+```
+
+Kita akan membuat komponen untuk topic diddalam `folder components` dan menghubungkannya dengan ListView
+
+```dart
+// lib/components/topic_item.dart
+import 'package:bookies/models/topic.dart';
+import 'package:flutter/material.dart';
+
+class TopicItem extends StatelessWidget {
+   // topic yang akan dikirim dari ListView
+   final Topic topic;
+   const TopicItem({Key? key, required this.topic}) : super(key: key);
+
+   @override
+   Widget build(BuildContext context) {
+      // Layout untuk Topik disini
+      return Container();
+   }
+}
+```
+
+```dart
+// lib/screens/home_page.dart
+
+// ...
+ListView.separated(
+   itemBuilder:
+      ((context, index) =>
+         TopicItem(topic: topics[index])
+      ),
+)
+```
+
+Tahap terakhir adalah membuat layout untuk topik sesuai dengan ukuran yang ada di desain.
+
+```dart
+// lib/components/topic_item.dart
+
+// ...
+return Container(
+   // Ukuran container
+   width: 138,
+   height: 180,
+   padding: const EdgeInsets.all(18),
+
+   // kita membuat warna container dan juga border radius
+   decoration: BoxDecoration(
+      color: topic.color,
+      borderRadius: BorderRadius.circular(25)),
+
+   child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+
+         // Untuk lingkaran luar Icon
+         Container(
+            padding: const EdgeInsets.all(11),
+            decoration: BoxDecoration(
+               color: Colors.white.withOpacity(.6),
+               borderRadius: BorderRadius.circular(23)),
+            child: Icon(
+               topic.icon,
+               color: text,
+               size: 24,
+            ),
+         ),
+
+         // Pemisah
+         const Spacer(),
+
+         // Judul topic
+         Text(
+            topic.title,
+            style: medium14.copyWith(color: text),
+         ),
+
+         const SizedBox(height: 6,),
+
+         // Jumblah buku
+         Text('${topic.totalBook} books',
+            style: regular10.copyWith(
+               color: text.withOpacity(.7)
+            ),
+         )
+      ],
+   ),
+);
+// ...
+```
 
 ##### Visual Studio Code Extensions
 
