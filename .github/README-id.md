@@ -35,6 +35,12 @@ Jadi, ayo kita mulai.
 - [Menyiapkan assets dan dependencies](#menyiapkan-assets-dan-dependencies)
 - [Membuat Struktur Projek](#membuat-struktur-projek)
 - [Theme](#theme)
+- [Membuat Model Data](#membuat-model-data)
+- [Menyiapkan Data](#menyiapkan-data)
+- [Coding TIme](#waktunya-coding)
+  - [Membuat Page Baru](#membuat-page-baru)
+  - [Slicing Topics](#slicing-topics)
+  - [Slicing Buku Populer](#slicing-buku-populer)
 
 ---
 
@@ -504,7 +510,7 @@ Hasil nya, yeayyy
 
 ### Slicing Buku Populer
 
-Kita akan membuat judul `Most popular seperti judul yang sebelumnya
+Kita akan membuat judul `Most popular` seperti judul yang sebelumnya
 
 ```dart
 // lib/screens/home_page.dart
@@ -643,7 +649,7 @@ Hasil nya, yeayyy
 
 ---
 
-# Selamat Mencoba :smile:
+## Selamat Mencoba :smile:
 
 ---
 
