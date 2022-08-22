@@ -510,6 +510,8 @@ Hasil nya, yeayyy
 
 ### Slicing Buku Populer
 
+![Guideline Popular](/docs/images/guideline-populars.png)
+
 Kita akan membuat judul `Most popular` seperti judul yang sebelumnya
 
 ```dart
